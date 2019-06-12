@@ -41,12 +41,8 @@ class Search extends React.PureComponent {
         this.setState({
           searchedBooks
         })
-      }).catch(() => {
-        this.setState({
-          searchedBooks: []
-        })
       })
-    }
+    } else this.setState({ searchedBooks: [], error: false });
   }
 
   render() {
